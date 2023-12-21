@@ -2,11 +2,7 @@ package com.keyin.Passenger;
 
 import com.keyin.Aircraft.Aircraft;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -19,7 +15,7 @@ public class Passenger {
     private String lastName;
     private String phoneNumber;
 
-    @ManyToMany
+    @OneToMany
     private List<Aircraft> aircrafts;
 
     public long getId() {

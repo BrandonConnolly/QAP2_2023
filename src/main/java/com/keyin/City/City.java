@@ -2,11 +2,7 @@ package com.keyin.City;
 
 import com.keyin.Airport.Airport;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -21,7 +17,7 @@ public class City {
 
 
 
-    @ManyToMany
+    @OneToMany
     private List<Airport> airports;
 
     public long getId() {

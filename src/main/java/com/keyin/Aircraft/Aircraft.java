@@ -20,9 +20,13 @@ public class Aircraft {
     private String airlineName;
     private Integer numberOfPassengers;
 
+    private String tailNumber;
+
     @ManyToMany
     private List<Airport> airport;
+    @ManyToMany
     private List<Passenger> passenger;
+
     public long getId() {
         return id;
     }
@@ -53,6 +57,14 @@ public class Aircraft {
 
     public void setNumberOfPassengers(Integer numberOfPassengers) {
         this.numberOfPassengers = numberOfPassengers;
+    }
+
+    public String getTailNumber() {
+        return tailNumber;
+    }
+
+    public void setTailNumber(String tailNumber) {
+        this.tailNumber = tailNumber;
     }
 
 }
